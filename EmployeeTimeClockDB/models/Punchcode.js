@@ -5,11 +5,10 @@ const Schema = mongoose.Schema;
 const PunchcodeSchema = new Schema({
     name: {
         type: String,
-        type: Number,
         required: true
     },
    
-    date: {
+    code: {
         type: Date,
         default: Date.now
     }
