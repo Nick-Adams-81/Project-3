@@ -1,10 +1,14 @@
 {
   "name": "mern",
+  "homepage": "https://thebigdeal916.github.io/Project-3",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@material-ui/core": "^4.10.0",
     "react": "^16.6.3",
+    "react-calendar": "^3.1.0",
+    "react-clock": "^2.4.0",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1"
   },
@@ -12,6 +16,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

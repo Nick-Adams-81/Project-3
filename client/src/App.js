@@ -1,21 +1,35 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Nav from './Components/Nav';
+import Footer from './Components/Footer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
+
+export default function FullWidthGrid() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Nav />
+        </Grid>
+        <Footer />
+      </Grid>
+
+      
+    </div>
+  );
 }
-
-export default App;
