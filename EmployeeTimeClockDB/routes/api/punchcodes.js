@@ -1,35 +1,35 @@
 const express = require('express');
 const router = express.Router();
 
-// Punchcode Model
-const Punchcode = require('../../models/Punchcode');
+// company Model
+const company = require('../../models/company');
 
-// @route  GET api/Punchcodes
-// @desc   Get All Punchcodes
+// @route  GET api/Company
+// @desc   Get All Company
 // @access Public
 router.get('/', (req, res) =>{
-    Punchcode.find()
+    company.find()
     .sort({date: -1 })
-    .then(punchcodes => res.json(punchcodes))
+    .then(Company => res.json(Company))
 })
 
-// @route  POST api/Punchcodes
-// @desc   POST an Punchcode
+// @route  POST api/Company
+// @desc   POST an company
 // @access Public
 router.post('/', (req, res) =>{
-    const newPunchcode = new Punchcode({
+    const newcompany = new company({
         name: req.body.name
     });
 
-    newPunchcode.save().then(punchcode => res.json(punchcode));
+    newcompany.save().then(company => res.json(company));
 });
 
-// @route  Delete api/punchcodes:id
-// @desc   Delete an Punchcode
+// @route  Delete api/Company:id
+// @desc   Delete an company
 // @access Public
 router.delete('/:id', (req, res) => {
-    Punchcode.findById(req.params.id)
-    .then(punchcode => punchcode.remove().then(() => res.json({success: true})))
+    company.findById(req.params.id)
+    .then(company => company.remove().then(() => res.json({success: true})))
         .catch(err => res.status(404).json({success: false}));
     })
 
