@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import './style.css'
+import { toast } from 'react-toastify';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,9 +11,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+toast.configure()
 
-function clickMe(){
-    console.log('click me motherfucker!!!')
+function viewHours(){
+  toast('Hours ready to View!', {
+    position: "top-center",
+    autoClose: 1400,
+    hideProgressBar: true,
+    closeOnclick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+    
 }
 
 export default function ContainedButtons() {
@@ -24,7 +35,7 @@ export default function ContainedButtons() {
       <Button 
       variant="contained" 
       color="primary"
-      onClick={clickMe}>
+      onClick={viewHours}>
         View Time
       </Button>
       

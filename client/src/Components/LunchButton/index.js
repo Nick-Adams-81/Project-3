@@ -2,6 +2,8 @@ import React from 'react';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { green, purple } from '@material-ui/core/colors';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 const BootstrapButton = withStyles({
   root: {
@@ -63,8 +65,18 @@ const theme = createMuiTheme({
   },
 });
 
-function clickMe() {
-  console.log("fuckin clicked!!!")
+toast.configure()
+
+function lunch() {
+  toast('Lunch started successfully!', {
+    position: "top-center",
+    autoClose: 1400,
+    hideProgressBar: true,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 }
 
 export default function CustomizedButtons() {
@@ -80,7 +92,7 @@ export default function CustomizedButtons() {
           variant="contained"
           color="primary"
           className={classes.margin}
-          onClick={clickMe}>
+          onClick={lunch}>
           Lunch
       </BootstrapButton>
       </ThemeProvider>

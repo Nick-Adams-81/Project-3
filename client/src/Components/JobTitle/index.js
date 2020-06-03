@@ -2,9 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
+//import API from '../../utils/API';
 import './style.css'
 
-const currencies = [
+const jobTitles = [
   {
     value: '$12.00/hr',
     label: 'Service',
@@ -32,31 +33,41 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function MultilineTextFields() {
+
+  
   const classes = useStyles();
-  const [currency, setCurrency] = React.useState('EUR');
+  const [jobTitle, setJobTitle] = React.useState('EUR');
 
   const handleChange = (event) => {
-    setCurrency(event.target.value);
+
+    setJobTitle(event.target.value);
   };
 
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div className="job-title">
+
         <TextField
-          id="standard-select-currency"
+          required id="standard-required"
+          helperText="Name"
+          onChange={handleChange}
+        />
+        <TextField
+          required id="standard-required"
           select
-          label="Job Title"
-          value={currency}
+          value={jobTitle}
           onChange={handleChange}
           helperText="Job Title"
         >
-          {currencies.map((option) => (
+          {jobTitles.map((option) => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
           ))}
-        </TextField> 
+        </TextField>
       </div>
     </form>
   );
