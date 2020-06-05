@@ -23,7 +23,7 @@ const handleFormSubmit = () => {
   setInterval(() => {
    new Date()
   }, 1000)
-  console.log(new Date)
+  console.log(new Date())
   API.saveEndTime()
       .then(res => {
           toast.success('Clock Out Successfull!', {

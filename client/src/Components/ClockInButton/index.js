@@ -76,7 +76,7 @@ const handleFormSubmit = () => {
       setInterval(() => {
         new Date()
       }, 1000)
-      console.log(new Date)
+      console.log(new Date())
     })
     .then(res => {
       toast.success('Clocked In Successfully!', {
