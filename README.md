@@ -32,10 +32,10 @@ To deploy, simply add and commit your changes, and push to Heroku. As is, the NP
 * https://gentle-springs-48433.herokuapp.com/
 
 ## Authored by: 
-* Nick Adams
-* Jake carver
-* Yeasir Huigas
-* Mike Shiv
+* Nick Adams - Front end(React)
+* Jake carver - Database(MongoDB)
+* Yeasir Huigas - Routes(Express)
+* Mike Shiv - Support(little of everything)
 
 # Acknowledgements
 ### very special thanks to the following: 
