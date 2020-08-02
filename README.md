@@ -38,6 +38,7 @@ To deploy, simply add and commit your changes, and push to Heroku. As is, the NP
 * Mike Shiv
 
 # Acknowledgements
+### very special thanks to the following: 
 * Treightn Mauldin
 * Allan Wong
 * Chris Song
