@@ -30,3 +30,14 @@ To deploy, simply add and commit your changes, and push to Heroku. As is, the NP
 
 ## Deployed app
 * https://gentle-springs-48433.herokuapp.com/
+
+## Authored by: 
+* Nick Adams
+* Jake carver
+* Yeasir Huigas
+* Mike Shiv
+
+# Acknowledgements
+* Treightn Mauldin
+* Allan Wong
+* Chris Song
